@@ -1,12 +1,61 @@
-# React + Vite
+# ⚛️ React Event Handler App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React project that demonstrates how to handle **user-driven events** such as button clicks, data fetching, and navigation using **React Hooks**, `axios`, and dynamic component rendering.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Project Objective
 
-## Expanding the ESLint configuration
+This app helps users understand and interact with UI elements by:
+- Fetching data (e.g. posts) via an API
+- Navigating using **left/right buttons**
+- Updating state dynamically with `useState` and `useEffect`
+- Rendering each item or post in a child component
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧠 Key Concepts Covered
+
+- Event Handling in React
+- State Management with `useState`
+- Side Effects with `useEffect`
+- API calls using `axios`
+- Reusable components
+- Conditional rendering
+
+---
+
+## 🗂 Folder Structure
+
+eventhandler/
+├── public/
+│ └── index.html
+├── src/
+│ ├── App.jsx # Main entry component
+│ ├── Handler.jsx # Contains navigation, event handling logic
+│ ├── Post.jsx # Displays individual post data
+│ ├── index.css # Tailwind or custom styling
+│ └── main.jsx # ReactDOM render
+├── tailwind.config.js # Tailwind setup (optional)
+├── vite.config.js # Vite bundler setup
+├── package.json
+└── README.md
+
+⚙️ Project Functionality
+Fetches post data using axios inside useEffect
+
+Displays a post in the Post component
+
+Navigates between posts using:
+
+FaChevronLeft ← Previous
+
+FaChevronRight → Next
+
+State updates using:
+
+useState to hold current index
+
+Buttons to increment/decrement the index
+
+Prevents going out of bounds (e.g., can’t go left at index 0)
